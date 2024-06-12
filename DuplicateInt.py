@@ -5,7 +5,7 @@ def strip_string(s):
     return s.strip()
 
 class DuplicateInt:
-    def _init_(self, input_file_name):
+    def __init__(self, input_file_name):
         self.input_file_name = input_file_name
         self.output_file_name = input_file_name[:-3] + 'txt_duplicates.txt'
 
@@ -46,7 +46,7 @@ class DuplicateInt:
         except FileNotFoundError:
             print(f"No such file or directory: {self.input_file_name}")
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     if len(sys.argv) < 2:
         print("No file name provided")
         print("Usage: python -u DuplicateInt.py <input_file_name>")
